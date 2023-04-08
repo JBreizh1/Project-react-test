@@ -1,0 +1,6 @@
+to execute docker :
+- Create a React Project
+- import file into your project
+- command : 
+  - docker build -f Dockerfile.dev --tag nodejs:latest
+  - docker run -d -p 3000:3000 -v $(pwd):/app nodejs:latest
