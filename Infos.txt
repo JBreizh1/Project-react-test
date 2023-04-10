@@ -4,3 +4,8 @@ to execute docker :
 - command : 
   - docker build -f Dockerfile.dev --tag nodejs:latest
   - docker run -d -p 3000:3000 -v $(pwd):/app nodejs:latest
+ or
+  - docker run -p 3000:3000 nodejs:latest
+
+- For test 
+  - docker run nodejs:latest npm run test
