@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t JBreizh/Project-react-test/nodejs:latest -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true JBreizh/Project-react-test/nodejs:latest npm run test
